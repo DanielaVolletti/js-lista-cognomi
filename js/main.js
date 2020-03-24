@@ -22,16 +22,17 @@ var cognomiOrdinati = cognomi.sort();
 
 console.log("I cognomi ordinati alfabeticamente sono: " + cognomiOrdinati);
 
+
+
 // ciclo cognomi
 for (var i = 0; i < cognomiOrdinati.length; i++) {
   var listaCompleta = cognomiOrdinati[i];
   console.log(listaCompleta);
+  // var per far ritornare elemento precedente
+  var cognomiPrima = document.getElementById('lista-cognomi').innerHTML;
+  // stampa lista ordinata alfabeticamente
+  document.getElementById('lista-cognomi').innerHTML= cognomiPrima + "<li>" + listaCompleta + "</li>";
 }
 
-// var per far ritornare elemento precedente
-var cognomiPrima = document.getElementById('lista-cognomi').innerHTML;
-
-// stampa lista ordinata alfabeticamente
-document.getElementById('lista-cognomi').innerHTML= cognomiPrima + "<li>" + listaCompleta + "</li>";
 
 // far ritornare l'indice dell'elemento all'interno dell'array ordinato
