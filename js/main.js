@@ -22,8 +22,6 @@ var cognomiOrdinati = cognomi.sort();
 
 console.log("I cognomi ordinati alfabeticamente sono: " + cognomiOrdinati);
 
-
-
 // ciclo cognomi
 for (var i = 0; i < cognomiOrdinati.length; i++) {
   var listaCompleta = cognomiOrdinati[i];
@@ -31,8 +29,13 @@ for (var i = 0; i < cognomiOrdinati.length; i++) {
   // var per far ritornare elemento precedente
   var cognomiPrima = document.getElementById('lista-cognomi').innerHTML;
   // stampa lista ordinata alfabeticamente
-  document.getElementById('lista-cognomi').innerHTML= cognomiPrima + "<li>" + listaCompleta + "</li>";
+  document.getElementById('lista-cognomi').innerHTML = cognomiPrima + "<li>" + listaCompleta + "</li>";
 }
 
-
 // far ritornare l'indice dell'elemento all'interno dell'array ordinato
+
+var indiceCognome = parseInt((cognomi.indexOf(cognomeUtente))+1);
+
+console.log("La posizione del tuo cognome è: " + indiceCognome);
+
+document.getElementById('posizione-cognome').innerHTML = "Il tuo cognome si trova nella posizione " + indiceCognome;
